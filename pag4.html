@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Kaya Crochet – Preços &amp; Pedidos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="kaya-style.css">
+  <style>
+    .w3-bar .w3-button { padding: 16px; }
+
+    /* FAQ accordion */
+    .faq-item {
+      border-bottom: 1px solid #E8DDD5;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 1.25rem 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #3D3529;
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: #C4956A; }
+    .faq-question i { transition: transform 0.3s; color: #C4956A; font-size: 0.85rem; }
+    .faq-question.open i { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      font-size: 0.93rem;
+      color: #6B5140;
+      line-height: 1.8;
+      padding: 0;
+    }
+    .faq-answer.open { max-height: 300px; padding-bottom: 1.25rem; }
+
+    /* Price breakdown visual */
+    .price-piece {
+      background: white;
+      border-left: 4px solid var(--caramel, #C4956A);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 0 2px 2px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(61,53,41,0.05);
+    }
+    .price-piece-label { font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; color: #3D3529; text-transform: uppercase; }
+    .price-piece-desc  { font-size: 0.82rem; color: #9B8170; margin-top:2px; }
+    .price-piece-icon  { font-size: 1.4rem; color: #C4956A; opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide logo-text">Kaya Crochet</a>
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button nav-link"><i class="fa fa-home"></i> Home</a>
+      <a href="pag2.html" class="w3-bar-item w3-button nav-link"><i class="fa fa-heart"></i> Sobre</a>
+      <a href="pag3.html" class="w3-bar-item w3-button nav-link"><i class="fa fa-th"></i> Coleção</a>
+      <a href="pag4.html" class="w3-bar-item w3-button nav-link active"><i class="fa fa-tag"></i> Preços</a>
+      <a href="pag5.html" class="w3-bar-item w3-button nav-link"><i class="fa fa-envelope"></i> Contato</a>
+    </div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()" style="color:#3D3529;">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- SIDEBAR (mobile) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16" style="color:rgba(250,247,242,0.55);">Fechar ×</a>
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-home"></i> Home</a>
+  <a href="pag2.html" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-heart"></i> Sobre</a>
+  <a href="pag3.html" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Coleção</a>
+  <a href="pag4.html" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-tag"></i> Preços</a>
+  <a href="pag5.html" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contato</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header" id="precos">
+  <div class="hero-ring hero-ring-1" style="opacity:0.35;"></div>
+  <div class="hero-ring hero-ring-3" style="opacity:0.3;"></div>
+  <div style="position:relative; z-index:1; max-width:580px;">
+    <span class="eyebrow fade-up">Transparência acima de tudo</span>
+    <h1 class="hero-title fade-up delay-1" style="font-size:clamp(2.5rem,4.5vw,3.8rem);">
+      Preços &amp;<br><em>Pedidos.</em>
+    </h1>
+    <p class="hero-subtitle fade-up delay-2" style="margin-bottom:0;">
+      Saiba como funciona o processo e como o valor de cada peça é calculado com honestidade.
+    </p>
+  </div>
+</div>
+
+<!-- COMO FUNCIONA -->
+<div class="w3-container" style="padding:90px 48px; background-color:#FAF7F2;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="w3-center" style="margin-bottom:3.5rem;">
+      <span class="section-label">Passo a passo</span>
+      <h2 style="font-size:1.9rem; margin-top:0.25rem;">
+        Como fazer seu <em style="color:#C4956A; font-style:italic;">pedido.</em>
+      </h2>
+      <span class="divider center"></span>
+    </div>
+
+    <div class="w3-row-padding">
+      <div class="w3-quarter w3-margin-bottom">
+        <div class="pricing-card" style="text-align:center;">
+          <i class="fa fa-comments" style="font-size:2.2rem; color:#C4956A; display:block; margin-bottom:1rem;"></i>
+          <div style="width:36px;height:36px;background:#F0E8D9;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:'Playfair Display',serif;font-weight:700;color:#C4956A;font-size:1.1rem;">1</div>
+          <h3 style="font-size:1rem !important; margin-bottom:0.5rem !important; text-align:center;">Manda mensagem</h3>
+          <p style="font-size:0.88rem; text-align:center;">Entre em contato pelo Instagram ou pelo formulário de contato, dizendo o modelo que você quer.</p>
+        </div>
+      </div>
+      <div class="w3-quarter w3-margin-bottom">
+        <div class="pricing-card" style="text-align:center;">
+          <i class="fa fa-paint-brush" style="font-size:2.2rem; color:#C4956A; display:block; margin-bottom:1rem;"></i>
+          <div style="width:36px;height:36px;background:#F0E8D9;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:'Playfair Display',serif;font-weight:700;color:#C4956A;font-size:1.1rem;">2</div>
+          <h3 style="font-size:1rem !important; margin-bottom:0.5rem !important; text-align:center;">Escolhe tudo</h3>
+          <p style="font-size:0.88rem; text-align:center;">Cor, tamanho, modelo e detalhes — você personaliza cada detalhe da peça, que será feita especialmente para você.</p>
+        </div>
+      </div>
+      <div class="w3-quarter w3-margin-bottom">
+        <div class="pricing-card" style="text-align:center;">
+          <i class="fa fa-calculator" style="font-size:2.2rem; color:#C4956A; display:block; margin-bottom:1rem;"></i>
+          <div style="width:36px;height:36px;background:#F0E8D9;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:'Playfair Display',serif;font-weight:700;color:#C4956A;font-size:1.1rem;">3</div>
+          <h3 style="font-size:1rem !important; margin-bottom:0.5rem !important; text-align:center;">Recebe o orçamento</h3>
+          <p style="font-size:0.88rem; text-align:center;">Com base na peça escolhida, enviamos o valor e o prazo estimado de entrega de forma transparente.</p>
+        </div>
+      </div>
+      <div class="w3-quarter w3-margin-bottom">
+        <div class="pricing-card" style="text-align:center;">
+          <i class="fa fa-heart" style="font-size:2.2rem; color:#C4956A; display:block; margin-bottom:1rem;"></i>
+          <div style="width:36px;height:36px;background:#F0E8D9;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:'Playfair Display',serif;font-weight:700;color:#C4956A;font-size:1.1rem;">4</div>
+          <h3 style="font-size:1rem !important; margin-bottom:0.5rem !important; text-align:center;">Recebe com amor</h3>
+          <p style="font-size:0.88rem; text-align:center;">Confirmado o pedido, a peça é feita com todo carinho e entregue no prazo combinado.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-center" style="margin-top:2.5rem;">
+      <a href="pag5.html" class="btn-primary">Fazer Meu Pedido</a>
+    </div>
+  </div>
+</div>
+
+<!-- COMO O PREÇO É CALCULADO -->
+<div class="w3-container" style="padding:90px 48px; background-color:#F0E8D9;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="w3-row-padding" style="align-items:flex-start;">
+
+      <!-- Texto explicativo -->
+      <div class="w3-col m6" style="padding-right:2.5rem;">
+        <span class="section-label">Preço justo</span>
+        <h2 style="font-size:1.9rem; margin-top:0.25rem; margin-bottom:1.25rem;">
+          Como calculamos o <em style="color:#C4956A; font-style:italic;">valor.</em>
+        </h2>
+        <p>
+          O preço de cada peça é calculado de forma justa e transparente, levando em conta três fatores principais: o tempo de confecção, o custo dos materiais usados e uma margem de lucro de aproximadamente <strong>15%</strong>.
+        </p>
+        <p>
+          Não existe tabela fixa, pois cada peça é única. Uma blusa mais elaborada leva mais tempo e mais fio — e isso reflete diretamente no valor. Mas sempre comunicamos o orçamento antes de qualquer confirmação.
+        </p>
+        <blockquote class="kaya-quote" style="margin-top:1.5rem;">
+          "Cada real do valor reflete horas de dedicação e amor colocados na peça. É um preço justo para quem cria e para quem recebe."
+        </blockquote>
+      </div>
+
+      <!-- Breakdown visual -->
+      <div class="w3-col m6" style="padding-top:1rem;">
+        <div class="price-piece">
+          <div>
+            <div class="price-piece-label">Tempo de Confecção</div>
+            <div class="price-piece-desc">Cada hora dedicada à criação da peça é valorizada</div>
+          </div>
+          <i class="fa fa-clock-o price-piece-icon"></i>
+        </div>
+        <div class="price-piece" style="border-left-color:#8B9D77;">
+          <div>
+            <div class="price-piece-label">Custo dos Materiais</div>
+            <div class="price-piece-desc">Fios, agulhas e materiais de qualidade selecionados</div>
+          </div>
+          <i class="fa fa-leaf price-piece-icon" style="color:#8B9D77;"></i>
+        </div>
+        <div class="price-piece" style="border-left-color:#B55F3B;">
+          <div>
+            <div class="price-piece-label">Margem de Lucro (~15%)</div>
+            <div class="price-piece-desc">Uma porcentagem justa sobre o custo total da peça</div>
+          </div>
+          <i class="fa fa-percent price-piece-icon" style="color:#B55F3B;"></i>
+        </div>
+
+        <!-- Formula visual -->
+        <div style="background:white; padding:1.25rem 1.5rem; border-radius:2px; margin-top:0.5rem; text-align:center; box-shadow:0 2px 10px rgba(61,53,41,0.05);">
+          <div style="font-family:'Playfair Display',serif; font-size:0.95rem; color:#3D3529; letter-spacing:1px;">
+            Tempo &nbsp;+&nbsp; Material &nbsp;+&nbsp; 15% lucro
+          </div>
+          <div style="font-size:0.72rem; color:#9B8170; margin-top:4px; font-weight:700; letter-spacing:2px; text-transform:uppercase;">= Valor Final Justo</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="w3-container" style="padding:90px 48px; background-color:#FAF7F2;">
+  <div style="max-width:760px; margin:0 auto;">
+    <div class="w3-center" style="margin-bottom:3rem;">
+      <span class="section-label">Dúvidas Frequentes</span>
+      <h2 style="font-size:1.9rem; margin-top:0.25rem;">
+        Perguntas <em style="color:#C4956A; font-style:italic;">frequentes.</em>
+      </h2>
+      <span class="divider center"></span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Quanto tempo leva para ficar pronta minha peça? <i class="fa fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        O prazo varia conforme a complexidade da peça. Peças simples (como tops menores) costumam levar menos tempo do que conjuntos completos ou peças com padrões elaborados. O prazo exato é sempre informado no orçamento, antes de confirmar o pedido.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Posso escolher as cores e o tamanho? <i class="fa fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        Sim! Toda a coleção atual é 100% personalizada. Você escolhe a cor, o modelo e o tamanho. A peça será feita especialmente para você, de acordo com suas medidas e preferências.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Como faço para pedir uma peça? <i class="fa fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        É bem simples! Você pode mandar mensagem pelo Instagram (@kayacrochet) ou usar o formulário de contato neste site. Nos conte o modelo desejado e a Alice vai te responder com o orçamento e prazo.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Fazem envio para outras cidades? <i class="fa fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        Entre em contato para combinarmos os detalhes de envio. Peças podem ser entregues pessoalmente ou enviadas via correios, com o custo do frete por conta do cliente.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Vocês têm um catálogo fixo? <i class="fa fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        Por enquanto trabalhamos com encomendas personalizadas, mas um catálogo com modelos fixos está no nosso plano! Acompanhe o Instagram para saber quando ele for lançado.
+      </div>
+    </div>
+
+    <div class="faq-item" style="border-bottom:none;">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Como funciona o pagamento? <i class="fa fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        As formas de pagamento são combinadas no momento do pedido. Em geral, trabalhamos com Pix. Entre em contato para saber mais detalhes.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<div class="insta-cta">
+  <div style="position:relative; z-index:1;">
+    <span class="eyebrow" style="color:rgba(255,255,255,0.75);">Pronta para encomendar?</span>
+    <h2 style="color:#fff; font-size:2.2rem; margin:0.5rem 0 0.75rem;">
+      Sua peça <em>está esperando.</em>
+    </h2>
+    <p style="color:rgba(255,255,255,0.8); font-size:0.95rem; max-width:420px; margin:0 auto 2rem; font-weight:300;">
+      Mande uma mensagem e vamos criar juntas a peça perfeita para você!
+    </p>
+    <a href="pag5.html" class="btn-white" style="margin-right:12px;">
+      <i class="fa fa-envelope"></i>&nbsp; Entrar em Contato
+    </a>
+    <a href="https://www.instagram.com/kayacrochet_?igsh=MXducTBsNWoxOHhrNQ==" target="_blank" class="btn-outline-white">
+      <i class="fa fa-instagram"></i>&nbsp; @kayacrochet
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="w3-padding-64 w3-center kaya-footer">
+  <div style="margin-bottom:1.5rem;">
+    <span style="font-family:'Playfair Display',serif; font-style:italic; font-size:1.4rem; color:#FAF7F2; opacity:0.85;">Kaya Crochet</span>
+  </div>
+  <p style="font-size:0.8rem; max-width:380px; margin:0 auto 1.5rem;">
+    Peças artesanais de crochê feitas com amor e dedicação, ponto a ponto.
+  </p>
+  <a href="#precos" class="btn-outline-white" style="margin-left:0; margin-bottom:1.5rem; display:inline-block;">
+    <i class="fa fa-arrow-up"></i>&nbsp; Voltar ao topo
+  </a>
+  <div class="social-icons" style="display:block; margin-top:1rem;">
+    <a href="https://www.instagram.com/kayacrochet_?igsh=MXducTBsNWoxOHhrNQ==" target="_blank" class="social-icon"><i class="fa fa-instagram"></i></a>
+    <a href="pag5.html" class="social-icon"><i class="fa fa-envelope"></i></a>
+  </div>
+  <div style="border-top:1px solid rgba(250,247,242,0.08); margin-top:2rem; padding-top:1.5rem;">
+    <small>© 2024 Kaya Crochet – Alice Ayumi Yamada Kaya. Todos os direitos reservados.</small>
+  </div>
+</footer>
+
+<script>
+var mySidebar = document.getElementById("mySidebar");
+function w3_open() {
+  mySidebar.style.display = mySidebar.style.display === 'block' ? 'none' : 'block';
+}
+function w3_close() { mySidebar.style.display = "none"; }
+
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+  // Open clicked (if was closed)
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+</script>
+</body>
+</html>
